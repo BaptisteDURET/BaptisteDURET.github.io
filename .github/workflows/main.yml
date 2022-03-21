@@ -34,7 +34,6 @@ jobs:
           password: ${{secrets.ACR_PASSWORD}}
       
       # Runs a set of commands using the runners shell
-      - name : run command
         run: |
           docker build . -t myappbaptisteduret.azurecr.io/appdb:${{ github.sha }}
           docker push myappbaptisteduret.azurecr.io/appdb:${{ github.sha }}
